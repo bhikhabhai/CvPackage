@@ -6,8 +6,7 @@ import math
 # ***********************
 
 # method to find distance  between two points
-def getDistance(self, point1, point2):
-    self.passMethod()
+def getDistance(point1, point2):
     # points coordinates
     x0, y0 = point1
     x1, y1 = point2
@@ -17,5 +16,3 @@ def getDistance(self, point1, point2):
 
     return dist
 
-def passMethod():
-    pass

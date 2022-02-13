@@ -1,15 +1,17 @@
 # Author : Kartik Panchal
 # All required dependency
+import math
+
 import cv2
 import mediapipe as mp
 
 
 # ***********************
 
-# Creating Face Detector Class.
-class MbFaceDetector:
+# Creating Face Mesh Detector Class.
+class MbFaceMeshDetector:
     # Constructor
-    def __init__(self, iMaxFaces=1, iMinDetectionCon=0.7):
+    def __init__(self, iMaxFaces=1, iMinDetectionCon=0.5):
         # important params
         self.maxNumFaces = iMaxFaces
         self.minDetectionConfidence = iMinDetectionCon
@@ -21,19 +23,19 @@ class MbFaceDetector:
         # face mesh contour specifications
         self.drawSpec = self.mpDrawing.DrawingSpec(thickness=1, circle_radius=1)
 
-        # configuring face solutions from media pipe
+        # configuring face mesh solutions from media pipe
         self.faces = self.mpFace.FaceMesh(
             max_num_faces=iMaxFaces,
             min_detection_confidence=iMinDetectionCon
         )
 
-    # Detect faces method
+    # Detect faces mesh method
     def detectFaces(self, inputImage, draw=False):
         # first converting input image to rgb
         inputImage.flags.writeable = False
         imageRgb = cv2.cvtColor(inputImage, cv2.COLOR_BGR2RGB)
 
-        # now detecting face
+        # now detecting face mesh
         result = self.faces.process(imageRgb)
 
         faces = []
@@ -57,19 +59,5 @@ class MbFaceDetector:
                     face.append([x, y])
                 # now appending to faces
                 faces.append(face)
+
         return inputImage, faces
-
-    # method to find distance  between two points
-    def getDistance(self, point1, point2):
-        self.passMethod()
-        # points coordinates
-        x0, y0 = point1
-        x1, y1 = point2
-
-        # using maths finding distance.
-        dist = (((x1 - x0) ** 2) + ((y1 - y0) ** 2)) ** 0.5
-
-        return dist
-
-    def passMethod(self):
-        pass

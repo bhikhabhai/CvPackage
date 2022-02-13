@@ -1,5 +1,7 @@
 # Author : Kartik Panchal
 # All required dependency
+import math
+
 import cv2
 import mediapipe as mp
 
@@ -45,17 +47,3 @@ class MbHandDetector:
                 )
         return inputImage
 
-    # method to find distance  between two points
-    def getDistance(self, point1, point2):
-        self.passMethod()
-        # points coordinates
-        x0, y0 = point1
-        x1, y1 = point2
-
-        # using maths finding distance.
-        dist = (((x1 - x0) ** 2) + ((y1 - y0) ** 2)) ** 0.5
-
-        return dist
-
-    def passMethod(self):
-        pass

@@ -2,14 +2,16 @@
 from setuptools import setup
 
 setup(
-   name='cvpack',
-   packages=['cvpack'],
-   version='0.0.1',
+   name='cvpackage',
+   packages=['cvpackage'],
+   version='0.0.4',
    license='MIT',
    description='An helper library for openCv developer.',
+   long_description='This an Computer Vision library uses mediapipe solutions at base level.An open cv developer can '
+                    'use it, to fastly use all solutions provided by mediapipe by writing few lines of code.',
    author='Kartik Panchal',
    author_email='clickshare07@gmail.com',
-   url='https://github.com/MrBucks07/OpenCv',
+   url='https://github.com/MrBucks07/CvPack',
    keywords=['MediaPipe', 'FaceMesh', 'FaceDetection', 'HandTracking', 'HandModule', 'FaceModule'],
    install_requires=[
       'opencv-python',

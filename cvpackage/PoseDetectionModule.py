@@ -27,6 +27,7 @@ class MbPoseDetection:
             min_detection_confidence=self.minDetectionCon
         )
 
+    # Method to detect poses
     def detectPoses(self, inputImage, draw=False):
         # first converting input image to rgb
         inputImage.flags.writeable = False

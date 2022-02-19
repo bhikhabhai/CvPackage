@@ -25,8 +25,8 @@ class MbFaceMeshDetector:
 
         # configuring face mesh solutions from media pipe
         self.faces = self.mpFace.FaceMesh(
-            max_num_faces=iMaxFaces,
-            min_detection_confidence=iMinDetectionCon
+            max_num_faces=self.maxNumFaces,
+            min_detection_confidence=self.minDetectionConfidence
         )
 
     # Detect faces mesh method

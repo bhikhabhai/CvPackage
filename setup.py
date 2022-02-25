@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
    name='cvpackage',
    packages=['cvpackage'],
-   version='0.0.6',
+   version='0.0.7',
    license='MIT',
    description='An helper library for openCv developer.',
    long_description='This an Computer Vision library uses mediapipe solutions at base level.An open cv developer can '

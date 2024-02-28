@@ -1,5 +1,4 @@
 If you find this repo usefull please support and follow me on
-* Instagram : kkartik___07
 * LinkedIn : Kartik panchal
 * For any query mail to pkartik3993@gmail.com    
 
